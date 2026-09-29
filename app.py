@@ -492,6 +492,8 @@ if routing_choice.startswith("A"):
     if st.button("Xác định 2 nhóm ngành tiềm năng nhất"):
         if not name.strip():
             st.warning("Vui lòng nhập Họ và tên ở Phần 1!")
+        elif s1 == 0 or s2 == 0 or s3 == 0 or s4 == 0 or s5 == 0 or s6 == 0:
+            st.warning("⚠️ Vui lòng trả lời đầy đủ tất cả các câu hỏi sàng lọc trước khi tiếp tục!")
         else:
             screening_scores = {
                 GROUPS[0]: s1,
@@ -507,47 +509,35 @@ if routing_choice.startswith("A"):
             top_groups = [g for g, score in sorted_s if score == highest_score]
             
             if len(top_groups) == 2:
-                selected_target_groups = top_groups
-                st.success(f"Hệ thống phát hiện 2 nhóm ngành có điểm số cao nhất và đồng đều nhất: **{selected_target_groups[0]}** và **{selected_target_groups[1]}**")
-                st.session_state['target_groups'] = selected_target_groups
+                st.session_state['target_groups'] = top_groups
+                st.success(f"Hệ thống phát hiện 2 nhóm ngành có điểm số cao nhất và đồng đều nhất: **{top_groups[0]}** và **{top_groups[1]}**")
             elif len(top_groups) == 1:
                 second_highest_score = sorted_s[1][1]
                 second_groups = [g for g, score in sorted_s if score == second_highest_score]
-                selected_target_groups = [top_groups[0], second_groups[0]]
-                st.success(f"Hệ thống đã chọn lọc ra 2 nhóm ngành phù hợp nhất: **{selected_target_groups[0]}** và **{selected_target_groups[1]}**")
-                st.session_state['target_groups'] = selected_target_groups
+                st.session_state['target_groups'] = [top_groups[0], second_groups[0]]
+                st.success(f"Hệ thống đã chọn lọc ra 2 nhóm ngành phù hợp nhất: **{top_groups[0]}** và **{top_groups[1]}**")
             else:
-                st.info(f"💡 Hệ thống ghi nhận có {len(top_groups)} nhóm ngành đạt cùng mức điểm.")
-                chosen_groups = st.multiselect(
-                    "Vui lòng chọn ra tối đa 2 nhóm ngành bạn cảm thấy hứng thú nhất từ danh sách dưới đây để tiếp tục phân tích chuyên sâu:",
-                    top_groups,
-                    max_selections=2
-                )
-                if chosen_groups:
-                    selected_target_groups = chosen_groups
-                    st.session_state['target_groups'] = selected_target_groups
-                else:
-                    st.warning("Vui lòng chọn từ 1 đến 2 nhóm ngành để tiếp tục!")
+                st.session_state['target_groups'] = top_groups[:2] # Tự động lấy tối đa 2 nhóm nếu điểm bằng nhau hàng loạt
 
-elif routing_choice.startswith("B"):
+elif routing_choice is not None and routing_choice.startswith("B"):
     st.header("PHẦN 2.2: Chọn nhóm ngành phân vân")
-    selected_target_groups = st.multiselect("Chọn tối đa 2 nhóm ngành bạn đang phân vân:", GROUPS, max_selections=2)
-    st.session_state['target_groups'] = selected_target_groups
+    chosen_b = st.multiselect("Chọn tối đa 2 nhóm ngành bạn đang phân vân:", GROUPS, max_selections=2)
+    if chosen_b:
+        st.session_state['target_groups'] = chosen_b
 
-else:
+elif routing_choice is not None and routing_choice.startswith("C"):
     st.header("PHẦN 2.2: Chọn nhóm ngành mục tiêu")
     target = st.selectbox("Chọn nhóm ngành mục tiêu của bạn:", GROUPS)
-    selected_target_groups = [target]
-    st.session_state['target_groups'] = selected_target_groups
+    if target:
+        st.session_state['target_groups'] = [target]
 
 st.write("---")
 
 # ==========================================
 # PHẦN 2.2 & PHẦN 3: MA TRẬN KHẢO SÁT CHUYÊN SÂU
 # ==========================================
-if 'target_groups' in st.session_state and not selected_target_groups:
-    selected_target_groups = st.session_state['target_groups']
-
+# Đồng bộ hóa dữ liệu từ session_state để hiển thị ma trận chuyên sâu
+selected_target_groups = st.session_state.get('target_groups', [])
 if selected_target_groups:
     st.header("PHẦN 2.2: Ma trận khảo sát chuyên sâu")
     
