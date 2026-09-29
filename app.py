@@ -479,7 +479,7 @@ if routing_choice is not None and routing_choice.startswith("A"):
         if not name.strip():
             st.warning("Vui lòng nhập Họ và tên ở Phần 1!")
         elif s1 == 0 or s2 == 0 or s3 == 0 or s4 == 0 or s5 == 0 or s6 == 0:
-            st.warning("⚠️ Vui lòng trả lời đầy đủ tất cả 6 câu hỏi sàng lọc trước khi tiếp tục!")
+            st.warning("⚠️ Vui lòng trả lời đầy đủ tất cả các câu hỏi sàng lọc trước khi tiếp tục!")
         else:
             screening_scores = {
                 GROUPS[0]: s1,
@@ -494,14 +494,27 @@ if routing_choice is not None and routing_choice.startswith("A"):
             highest_score = sorted_s[0][1]
             top_groups = [g for g, score in sorted_s if score == highest_score]
             
-            if len(top_groups) >= 2:
-                st.session_state['target_groups'] = top_groups[:2]
-                st.success(f"Hệ thống đã chọn lọc ra các nhóm ngành tiềm năng nhất: **{top_groups[0]}** và **{top_groups[1]}**")
-            else:
+            if len(top_groups) == 2:
+                st.session_state['target_groups'] = top_groups
+                st.success(f"Hệ thống phát hiện 2 nhóm ngành có điểm số cao nhất và đồng đều nhất: **{top_groups[0]}** và **{top_groups[1]}**")
+            elif len(top_groups) == 1:
                 second_highest_score = sorted_s[1][1]
                 second_groups = [g for g, score in sorted_s if score == second_highest_score]
                 st.session_state['target_groups'] = [top_groups[0], second_groups[0]]
                 st.success(f"Hệ thống đã chọn lọc ra 2 nhóm ngành phù hợp nhất: **{top_groups[0]}** và **{second_groups[0]}**")
+            else:
+                # Trường hợp có từ 3 nhóm trở lên bằng điểm nhau, hiển thị multiselect để người dùng tự chọn
+                st.info(f"💡 Hệ thống ghi nhận có {len(top_groups)} nhóm ngành đạt cùng mức điểm cao nhất.")
+                chosen_groups = st.multiselect(
+                    "Vui lòng chọn ra tối đa 2 nhóm ngành bạn cảm thấy hứng thú nhất từ danh sách dưới đây để tiếp tục phân tích chuyên sâu:",
+                    top_groups,
+                    max_selections=2,
+                    key="manual_selection_multiselect"
+                )
+                if chosen_groups:
+                    st.session_state['target_groups'] = chosen_groups
+                else:
+                    st.warning("⚠️ Vui lòng chọn từ 1 đến 2 nhóm ngành từ danh sách trên để tiếp tục!")
 
 elif routing_choice is not None and routing_choice.startswith("B"):
     st.header("PHẦN 2.2: Chọn nhóm ngành phân vân")
