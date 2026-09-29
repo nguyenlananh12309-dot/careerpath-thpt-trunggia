@@ -4,7 +4,7 @@ import random
 
 st.set_page_config(page_title="Hệ thống Hướng nghiệp Cá nhân hóa - THPT Trung Giã", page_icon="🎯", layout="centered")
 
-st.title("🎯 HỆ THỐNG PHẢN HỒI HƯỚNG NGHIỆP CÁ NHÂN HÓA")
+st.markdown("<h1 style='text-align: left; font-size: 32px;'>🎯 HỆ THỐNG PHẢN HỒI HƯỚNG NGHIỆP<br>CÁ NHÂN HÓA</h1>", unsafe_allow_html=True)
 st.write("---")
 
 # ==========================================
@@ -315,7 +315,6 @@ def tao_phan_hoi_ro_rang(data, grp, grade):
 def hien_thi_ho_so_tong_quan(data, grp, grade):
     strengths, priorities = tao_ho_so_ca_nhan(data)
     st.markdown("### 🧭 Hồ sơ tương thích của bạn")
-    st.caption("Kết quả dưới đây là chỉ báo tham khảo được tính từ 5 nhóm yếu tố của mô hình nghiên cứu; không phải kết luận xác định ngành nghề hay dự đoán khả năng thành công.")
 
     c1, c2 = st.columns(2)
     with c1:
@@ -429,14 +428,12 @@ GROUPS = [
 
 selected_target_groups = []
 
-st.markdown("### 🔗 Cấu trúc phản hồi của mô hình")
-st.caption("Công cụ kế thừa 5 nhóm yếu tố đã được sử dụng trong nghiên cứu: Cá nhân → Gia đình → Nhà trường → Truyền thông & môi trường xã hội → Trải nghiệm nghề nghiệp. Mỗi nhóm ngành có bộ câu hỏi riêng để tránh phản hồi chung chung.")
 
 # ==========================================
 # PHẦN 2.1: SÀNG LỌC NHANH XU HƯỚNG HÀNH VI
 # ==========================================
 if routing_choice.startswith("A"):
-    st.header("PHẦN 2.1: Sàng lọc nhanh xu hướng hành vi (Screening)")
+    st.header("PHẦN 2.1: Sàng lọc nhanh xu hướng hành vi ")
     
     s1_opt = st.radio("Câu S1: Khi đối mặt với một thiết bị điện tử bị hỏng, một bài toán logic hóc búa hoặc một phần mềm bị lỗi cần mày mò, phản xạ tự nhiên của bạn là: ", (
         "A. Thấy phiền phức, lập tức bỏ qua hoặc né tránh.",
@@ -971,13 +968,11 @@ Bạn có thể cởi mở chia sẻ với bố mẹ rằng: Trong quá trình h
                 if not ds_nganh:
                     st.warning(
                         "⚠️ Nhóm ngành này hiện chưa có đủ bản ghi điểm chuẩn đã được chuẩn hóa trong "
-                        "phiên bản thử nghiệm. Hệ thống **không tự suy đoán** điểm chuẩn từ một trường "
-                        "khác hoặc dùng một điểm chung cho toàn trường. Đây là khoảng dữ liệu cần tiếp tục cập nhật."
+                        "phiên bản thử nghiệm. Đây là khoảng dữ liệu cần tiếp tục cập nhật."
                     )
                 else:
                     if loc_theo_to_hop:
                         st.caption(
-                            f"Hiển thị tối đa 10 lựa chọn được phân bố từ mức điểm tham khảo thấp đến cao. "
                             f"Hiện có {len(ds_nganh)} bản ghi đã xác minh phù hợp với tổ hợp **{to_hop_loc_hien_tai}**."
                         )
                     else:
@@ -1005,7 +1000,6 @@ Bạn có thể cởi mở chia sẻ với bố mẹ rằng: Trong quá trình h
                     )
 
                 st.caption(
-                    "📚 Cơ sở dữ liệu thử nghiệm hiện đã có bản ghi cho cả 6 nhóm ngành; số lượng bản ghi ở từng nhóm có thể khác nhau. "
                     "⚠️ Điểm trúng tuyển 2026 là dữ liệu tham khảo của kỳ tuyển sinh 2026, không phải dự đoán khả năng trúng tuyển cho các năm sau. "
                     "Điểm chuẩn có thể thay đổi theo từng năm, ngành, phương thức, tổ hợp và quy định tuyển sinh."
                 )
