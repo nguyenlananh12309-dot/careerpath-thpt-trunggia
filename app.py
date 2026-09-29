@@ -503,19 +503,24 @@ if routing_choice is not None and routing_choice.startswith("A"):
                 st.session_state['target_groups'] = [top_groups[0], second_groups[0]]
                 st.success(f"Hệ thống đã chọn lọc ra 2 nhóm ngành phù hợp nhất: **{top_groups[0]}** và **{second_groups[0]}**")
             else:
-                # Trường hợp có từ 3 nhóm trở lên bằng điểm nhau, hiển thị multiselect để người dùng tự chọn
                 st.info(f"💡 Hệ thống ghi nhận có {len(top_groups)} nhóm ngành đạt cùng mức điểm cao nhất.")
+                
+                # Khởi tạo giá trị trong session_state nếu chưa có
+                if 'manual_chosen' not in st.session_state:
+                    st.session_state['manual_chosen'] = []
+
                 chosen_groups = st.multiselect(
-                    "Vui lòng chọn ra tối đa 2 nhóm ngành bạn cảm thấy hứng thú nhất từ danh sách dưới đây để tiếp tục phân tích chuyên sâu:",
+                    "Vui lòng chọn ra từ 1 đến 2 nhóm ngành bạn cảm thấy hứng thú nhất từ danh sách dưới đây để tiếp tục phân tích chuyên sâu:",
                     top_groups,
                     max_selections=2,
                     key="manual_selection_multiselect"
                 )
+                
                 if chosen_groups:
                     st.session_state['target_groups'] = chosen_groups
+                    st.success(f"✓ Đã ghi nhận các nhóm ngành lựa chọn: {', '.join(chosen_groups)}. Mời bạn tiếp tục kéo xuống dưới để thực hiện ma trận khảo sát chuyên sâu.")
                 else:
-                    st.warning("⚠️ Vui lòng chọn từ 1 đến 2 nhóm ngành từ danh sách trên để tiếp tục!")
-
+                    st.warning("⚠️ Vui lòng chọn từ 1 đến 2 nhóm ngành từ danh sách trên để hiển thị tiếp khảo sát chuyên sâu!")
 elif routing_choice is not None and routing_choice.startswith("B"):
     st.header("PHẦN 2.2: Chọn nhóm ngành phân vân")
     chosen_b = st.multiselect("Chọn tối đa 2 nhóm ngành bạn đang phân vân:", GROUPS, max_selections=2)
