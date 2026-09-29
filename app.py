@@ -2,7 +2,7 @@ import streamlit as st
 import plotly.graph_objects as go
 import random
 
-st.set_page_config(page_title="Hệ thống Hướng nghiệp Cá nhân hóa - THPT Trung Giã", page_icon="🎯", layout="centered")
+st.set_page_config(page_title="Hệ thống Hướng nghiệp Cá nhân hóa - THPT Trung Giã", page_icon="🎯", layout="centered") 
 
 st.markdown("<h1 style='text-align: left; font-size: 32px;'>🎯 HỆ THỐNG PHẢN HỒI HƯỚNG NGHIỆP<br>CÁ NHÂN HÓA</h1>", unsafe_allow_html=True)
 st.write("---")
@@ -475,6 +475,7 @@ if routing_choice is not None and routing_choice.startswith("A"):
     ), index=None, key="s6_radio")
     s6 = lay_diem_lua_chon(s6_opt)
 
+    # Nút bấm tính toán điểm sàng lọc
     if st.button("Xác định 2 nhóm ngành tiềm năng nhất"):
         if not name.strip():
             st.warning("Vui lòng nhập Họ và tên ở Phần 1!")
@@ -496,31 +497,30 @@ if routing_choice is not None and routing_choice.startswith("A"):
             
             if len(top_groups) == 2:
                 st.session_state['target_groups'] = top_groups
+                st.session_state['top_groups_cache'] = []
                 st.success(f"Hệ thống phát hiện 2 nhóm ngành có điểm số cao nhất và đồng đều nhất: **{top_groups[0]}** và **{top_groups[1]}**")
             elif len(top_groups) == 1:
                 second_highest_score = sorted_s[1][1]
                 second_groups = [g for g, score in sorted_s if score == second_highest_score]
                 st.session_state['target_groups'] = [top_groups[0], second_groups[0]]
+                st.session_state['top_groups_cache'] = []
                 st.success(f"Hệ thống đã chọn lọc ra 2 nhóm ngành phù hợp nhất: **{top_groups[0]}** và **{second_groups[0]}**")
             else:
-                st.info(f"💡 Hệ thống ghi nhận có {len(top_groups)} nhóm ngành đạt cùng mức điểm cao nhất.")
-                
-                # Khởi tạo giá trị trong session_state nếu chưa có
-                if 'manual_chosen' not in st.session_state:
-                    st.session_state['manual_chosen'] = []
+                # Lưu danh sách nhiều nhóm điểm bằng nhau vào session_state để hiện multiselect bên ngoài nút bấm
+                st.session_state['top_groups_cache'] = top_groups
+                st.session_state['target_groups'] = []
 
-                chosen_groups = st.multiselect(
-                    "Vui lòng chọn ra từ 1 đến 2 nhóm ngành bạn cảm thấy hứng thú nhất từ danh sách dưới đây để tiếp tục phân tích chuyên sâu:",
-                    top_groups,
-                    max_selections=2,
-                    key="manual_selection_multiselect"
-                )
-                
-                if chosen_groups:
-                    st.session_state['target_groups'] = chosen_groups
-                    st.success(f"✓ Đã ghi nhận các nhóm ngành lựa chọn: {', '.join(chosen_groups)}. Mời bạn tiếp tục kéo xuống dưới để thực hiện ma trận khảo sát chuyên sâu.")
-                else:
-                    st.warning("⚠️ Vui lòng chọn từ 1 đến 2 nhóm ngành từ danh sách trên để hiển thị tiếp khảo sát chuyên sâu!")
+    # Hiển thị multiselect nằm ngoài nút bấm để tránh bị reset khi chọn
+    if 'top_groups_cache' in st.session_state and len(st.session_state['top_groups_cache']) > 2:
+        st.info(f"💡 Hệ thống ghi nhận có {len(st.session_state['top_groups_cache'])} nhóm ngành đạt cùng mức điểm cao nhất.")
+        chosen_groups = st.multiselect(
+            "Vui lòng chọn ra từ 1 đến 2 nhóm ngành bạn cảm thấy hứng thú nhất từ danh sách dưới đây để tiếp tục phân tích chuyên sâu:",
+            st.session_state['top_groups_cache'],
+            max_selections=2,
+            key="manual_selection_multiselect"
+        )
+        if chosen_groups:
+            st.session_state['target_groups'] = chosen_groups
 elif routing_choice is not None and routing_choice.startswith("B"):
     st.header("PHẦN 2.2: Chọn nhóm ngành phân vân")
     chosen_b = st.multiselect("Chọn tối đa 2 nhóm ngành bạn đang phân vân:", GROUPS, max_selections=2)
