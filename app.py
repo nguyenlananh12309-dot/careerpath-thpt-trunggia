@@ -50,11 +50,8 @@ PROGRAM_DATABASE = {
     "Nhóm 5: Sư phạm – Tâm lý & Nhân văn (Education & Humanities)": [
         {"truong":"Đại học Sư phạm Hà Nội (HNUE)","nganh":n,"ma_nganh":m,"to_hop":th,"phuong_thuc":"Điểm trúng tuyển đại học chính quy 2026","nam":2026,"diem":d,"verified":True,"nguon":"https://tuyensinh.hnue.edu.vn/tuyensinh2026/665","link_truong":"https://hnue.edu.vn"}
         for n,m,th,d in [
-            # ===== NHÓM NGÀNH KHOA HỌC GIÁO DỤC =====
             ("Giáo dục học (Giáo dục và truyền thông)","7140101",["D01"],24.89),
             ("Quản lí giáo dục","7140114",["D01","C20"],25.65),
-
-            # ===== TẤT CẢ CHƯƠNG TRÌNH ĐÀO TẠO GIÁO VIÊN 2026 =====
             ("Giáo dục Mầm non","7140201",["M00"],23.93),
             ("Giáo dục Mầm non - Sư phạm Tiếng Anh","7140201K",["M01","M02"],22.25),
             ("Giáo dục Tiểu học","7140202",["D01"],28.15),
@@ -83,8 +80,6 @@ PROGRAM_DATABASE = {
             ("Sư phạm Công nghệ","7140246",["A00","A01"],23.29),
             ("Sư phạm Khoa học tự nhiên","7140247",["A00","B00"],27.47),
             ("Sư phạm Lịch sử - Địa lí","7140249",["C00"],27.78),
-
-            # ===== CÁC NGÀNH NHÂN VĂN - TÂM LÝ - XÃ HỘI ĐÃ CÓ TRONG CSDL =====
             ("Tiếng Việt và văn hóa Việt Nam","7220101",["C00","D14"],24.53),
             ("Ngôn ngữ Anh","7220201",["D01"],25.57),
             ("Ngôn ngữ Pháp (Tiếng Pháp ứng dụng và giao tiếp quốc tế)","7220203",["D01","D03"],22.25),
@@ -104,10 +99,10 @@ PROGRAM_DATABASE = {
         ]
     ],
     "Nhóm 6: Nghệ thuật – Thiết kế & Sáng tạo (Creative Arts & Design)": [
-        {"truong":"Đại học Kiến trúc Hà Nội (HAU)","nganh":"Thiết kế đồ họa","ma_nganh":"7210403","to_hop":["Năng khiếu"],"phuong_thuc":"Điểm trúng tuyển đại học chính quy 2026","nam":2026,"diem":23.47,"verified":True,"nguon":"https://www.hau.edu.vn/thong-tin-hoat-dong_c0706/Thong-bao-ve-diem-trung-tuyen-dai-hoc-hinh-thuc-chinh-quy-nam-2026-doi-voi-nhom-nganh-va-cac-nganhchuyen-nganh-xet-tuyen-doc-lap_n4794.html","link_truong":"https://hau.edu.vn"},
-        {"truong":"Đại học Kiến trúc Hà Nội (HAU)","nganh":"Nghệ thuật số","ma_nganh":"7210403_1","to_hop":["Năng khiếu"],"phuong_thuc":"Điểm trúng tuyển đại học chính quy 2026","nam":2026,"diem":24.00,"verified":True,"nguon":"https://www.hau.edu.vn/thong-tin-hoat-dong_c0706/Thong-bao-ve-diem-trung-tuyen-dai-hoc-hinh-thuc-chinh-quy-nam-2026-doi-voi-nhom-nganh-va-cac-nganhchuyen-nganh-xet-tuyen-doc-lap_n4794.html","link_truong":"https://hau.edu.vn"},
-        {"truong":"Đại học Kiến trúc Hà Nội (HAU)","nganh":"Thiết kế thời trang","ma_nganh":"7210404","to_hop":["Năng khiếu"],"phuong_thuc":"Điểm trúng tuyển đại học chính quy 2026","nam":2026,"diem":22.50,"verified":True,"nguon":"https://www.hau.edu.vn/thong-tin-hoat-dong_c0706/Thong-bao-ve-diem-trung-tuyen-dai-hoc-hinh-thuc-chinh-quy-nam-2026-doi-voi-nhom-nganh-va-cac-nganhchuyen-nganh-xet-tuyen-doc-lap_n4794.html","link_truong":"https://hau.edu.vn"},
-        {"truong":"Đại học Kiến trúc Hà Nội (HAU)","nganh":"Thiết kế nội thất","ma_nganh":"7580108","to_hop":["Năng khiếu"],"phuong_thuc":"Điểm trúng tuyển đại học chính quy 2026","nam":2026,"diem":22.75,"verified":True,"nguon":"https://www.hau.edu.vn/thong-tin-hoat-dong_c0706/Thong-bao-ve-diem-trung-tuyen-dai-hoc-hinh-thuc-chinh-quy-nam-2026-doi-voi-nhom-nganh-va-cac-nganhchuyen-nganh-xet-tuyen-doc-lap_n4794.html","link_truong":"https://hau.edu.vn"},
+        {"truong":"Đại học Kiến trúc Hà Nội (HAU)","nganh":"Thiết kế đồ họa","ma_nganh":"7210403","to_hop":["Năng khiếu"],"phuong_thuc":"Điểm trúng tuyển đại học chính quy 2026","nam":2026,"diem":23.47,"verified":True,"nguon":"https://www.hau.edu.vn/thong-tin-hoat-dong_c0706/Thong-bao-ve-diem-trung-tuyen-dai-hoc-hinh-thuc-chinh-quy-nam-2026-doi-voi-nhom-nganh-va-cac-nganhchuyen-nganh-xet-tuyen-doc-lap_n4794.html","link_truong":"https://www.hau.edu.vn"},
+        {"truong":"Đại học Kiến trúc Hà Nội (HAU)","nganh":"Nghệ thuật số","ma_nganh":"7210403_1","to_hop":["Năng khiếu"],"phuong_thuc":"Điểm trúng tuyển đại học chính quy 2026","nam":2026,"diem":24.00,"verified":True,"nguon":"https://www.hau.edu.vn/thong-tin-hoat-dong_c0706/Thong-bao-ve-diem-trung-tuyen-dai-hoc-hinh-thuc-chinh-quy-nam-2026-doi-voi-nhom-nganh-va-cac-nganhchuyen-nganh-xet-tuyen-doc-lap_n4794.html","link_truong":"https://www.hau.edu.vn"},
+        {"truong":"Đại học Kiến trúc Hà Nội (HAU)","nganh":"Thiết kế thời trang","ma_nganh":"7210404","to_hop":["Năng khiếu"],"phuong_thuc":"Điểm trúng tuyển đại học chính quy 2026","nam":2026,"diem":22.50,"verified":True,"nguon":"https://www.hau.edu.vn/thong-tin-hoat-dong_c0706/Thong-bao-ve-diem-trung-tuyen-dai-hoc-hinh-thuc-chinh-quy-nam-2026-doi-voi-nhom-nganh-va-cac-nganhchuyen-nganh-xet-tuyen-doc-lap_n4794.html","link_truong":"https://www.hau.edu.vn"},
+        {"truong":"Đại học Kiến trúc Hà Nội (HAU)","nganh":"Thiết kế nội thất","ma_nganh":"7580108","to_hop":["Năng khiếu"],"phuong_thuc":"Điểm trúng tuyển đại học chính quy 2026","nam":2026,"diem":22.75,"verified":True,"nguon":"https://www.hau.edu.vn/thong-tin-hoat-dong_c0706/Thong-bao-ve-diem-trung-tuyen-dai-hoc-hinh-thuc-chinh-quy-nam-2026-doi-voi-nhom-nganh-va-cac-nganhchuyen-nganh-xet-tuyen-doc-lap_n4794.html","link_truong":"https://www.hau.edu.vn"},
     ],
 }
 
@@ -167,7 +162,8 @@ def hien_thi_danh_sach_nganh(tieu_de, danh_sach, diem_hs):
         )
 
 def lay_diem_lua_chon(selected_str):
-    if selected_str.startswith("A."): return 1
+    if selected_str is None: return 0
+    elif selected_str.startswith("A."): return 1
     elif selected_str.startswith("B."): return 2
     elif selected_str.startswith("C."): return 3
     elif selected_str.startswith("D."): return 4
@@ -240,7 +236,6 @@ def goi_y_hanh_dong(data, grade):
     return actions[:5]
 
 def tao_phan_hoi_ro_rang(data, grp, grade):
-    """Tạo phản hồi hành động ngắn, cụ thể từ chính hồ sơ 5 yếu tố."""
     factors = {
         "noi_luc": data.get("noi_luc", 3.0),
         "gia_dinh": data.get("gia_dinh", 3.0),
@@ -252,8 +247,6 @@ def tao_phan_hoi_ro_rang(data, grp, grade):
     strengths = sorted(factors.items(), key=lambda x: x[1], reverse=True)[:2]
 
     advice = []
-    p1, p2 = priorities
-
     action_map = {
         "noi_luc": (
             "🔹 Củng cố nền tảng cá nhân",
@@ -279,19 +272,15 @@ def tao_phan_hoi_ro_rang(data, grp, grade):
 
     for key, score in priorities:
         title, text = action_map[key]
-        if score < 3.0:
-            advice.append((title, text))
-        elif score < 3.5:
+        if score < 3.0 or score < 3.5:
             advice.append((title, text))
 
-    # Nếu hai yếu tố thấp nhất đều từ 3.5 trở lên, chuyển trọng tâm sang kiểm chứng lựa chọn.
     if not advice:
         advice.append((
             "🔹 Kiểm chứng lựa chọn bằng trải nghiệm",
             "Các nhóm yếu tố hiện tương đối cân bằng. Thay vì chỉ dựa vào điểm tổng, hãy chọn một hoạt động thực tế liên quan đến nhóm ngành và đối chiếu lại kết quả sau khi có thêm trải nghiệm."
         ))
 
-    # Một lời nhắc dựa trên điểm tựa cao nhất.
     strong_key, strong_score = strengths[0]
     strong_action = {
         "noi_luc": "Bạn có thể tận dụng điểm tựa cá nhân hiện có để chủ động thử sức bằng một nhiệm vụ hoặc sản phẩm cụ thể liên quan đến nhóm ngành.",
@@ -302,7 +291,6 @@ def tao_phan_hoi_ro_rang(data, grp, grade):
     }[strong_key]
     advice.append(("💡 Tận dụng điểm tựa nổi bật", strong_action))
 
-    # Điều chỉnh bước tiếp theo theo khối lớp.
     grade_action = {
         "Khối 10": "Hãy ưu tiên khám phá và trải nghiệm, chưa cần xem kết quả này như quyết định cuối cùng.",
         "Khối 11": "Hãy bắt đầu thu hẹp lựa chọn và đối chiếu với tổ hợp môn, điều kiện gia đình và yêu cầu tuyển sinh.",
@@ -355,7 +343,8 @@ routing_choice = st.radio(
         "A. Chưa có định hướng cụ thể: Bạn cảm thấy mơ hồ, chưa biết mình phù hợp với lĩnh vực nào.",
         "B. Đang phân vân giữa một số nhóm ngành: Bạn đã có một vài lựa chọn nhưng chưa thể đưa ra quyết định dứt khoát.",
         "C. Đã xác định rõ một nhóm ngành mục tiêu: Bạn đã có mục tiêu cụ thể và muốn kiểm chứng mức độ khả thi cùng các rào cản thực tế."
-    )
+    ),
+    index=None
 )
 
 st.write("---")
@@ -426,14 +415,11 @@ GROUPS = [
     "Nhóm 6: Nghệ thuật – Thiết kế & Sáng tạo (Creative Arts & Design)"
 ]
 
-selected_target_groups = []
-
-
 # ==========================================
 # PHẦN 2.1: SÀNG LỌC NHANH XU HƯỚNG HÀNH VI
 # ==========================================
-if routing_choice.startswith("A"):
-    st.header("PHẦN 2.1: Sàng lọc nhanh xu hướng hành vi ")
+if routing_choice is not None and routing_choice.startswith("A"):
+    st.header("PHẦN 2.1: Sàng lọc nhanh xu hướng hành vi")
     
     s1_opt = st.radio("Câu S1: Khi đối mặt với một thiết bị điện tử bị hỏng, một bài toán logic hóc búa hoặc một phần mềm bị lỗi cần mày mò, phản xạ tự nhiên của bạn là: ", (
         "A. Thấy phiền phức, lập tức bỏ qua hoặc né tránh.",
@@ -441,7 +427,7 @@ if routing_choice.startswith("A"):
         "C. Tò mò xem qua một chút nhưng rất nhanh nản nếu thấy phức tạp.",
         "D. Tự lên mạng tìm kiếm video hướng dẫn hoặc bài viết để làm theo từng bước.",
         "E. Cực kỳ hào hứng tự tay tháo lắp, viết mã lệnh (code) hoặc kiên trì thử nhiều cách để tìm ra nguyên nhân đến cùng."
-    ), key="s1_radio")
+    ), index=None, key="s1_radio")
     s1 = lay_diem_lua_chon(s1_opt)
 
     s2_opt = st.radio("Câu S2: Khi tham gia một hoạt động tập thể có tính chất buôn bán, gây quỹ hoặc cần điều phối nguồn lực/sự kiện, xu hướng của bạn là: ", (
@@ -450,7 +436,7 @@ if routing_choice.startswith("A"):
         "C. Tham gia phụ giúp bán hàng hoặc điều phối cho vui, không để tâm hiệu quả.",
         "D. Tự tin ra mặt tiếp thị, chào hàng, thương lượng và thuyết phục người mua.",
         "E. Chủ động lập kế hoạch kinh doanh, tính toán giá thành, quản lý dòng tiền và tìm cách tối ưu hóa lợi nhuận."
-    ), key="s2_radio")
+    ), index=None, key="s2_radio")
     s2 = lay_diem_lua_chon(s2_opt)
 
     s3_opt = st.radio("Câu S3: Khi chứng kiến một vụ việc tranh luận xã hội, các quy định chưa thỏa đáng hoặc vấn đề công bằng trong tập thể, thái độ của bạn là: ", (
@@ -459,7 +445,7 @@ if routing_choice.startswith("A"):
         "C. Nắm bắt thông tin bề nổi nhưng ngại nêu quan điểm cá nhân.",
         "D. Quan tâm đến phản ứng và cảm xúc của các bên liên quan để đưa ra góc nhìn hòa giải.",
         "E. Đi sâu tìm hiểu các quy định, văn bản pháp lý, rà soát lập luận logic của từng bên để phân tích đúng – sai và lên tiếng bảo vệ sự công bằng."
-    ), key="s3_radio")
+    ), index=None, key="s3_radio")
     s3 = lay_diem_lua_chon(s3_opt)
 
     s4_opt = st.radio("Câu S4: Khi chứng kiến người khác bị thương tích, ốm đau hoặc khi nghĩ đến việc chăm sóc thể chất, sức khỏe con người, bạn cảm thấy: ", (
@@ -468,7 +454,7 @@ if routing_choice.startswith("A"):
         "C. Chỉ hỗ trợ những việc vặt bên ngoài khi được người lớn yêu cầu.",
         "D. Cẩn thận giúp đỡ việc cho uống thuốc, chăm sóc cơ bản theo hướng dẫn có sẵn.",
         "E. Giữ được bình tĩnh, tỉ mỉ sơ cứu, chăm sóc chu đáo và thôi thúc mong muốn hiểu sâu về cơ chế cơ thể để chữa trị."
-    ), key="s4_radio")
+    ), index=None, key="s4_radio")
     s4 = lay_diem_lua_chon(s4_opt)
 
     s5_opt = st.radio("Câu S5: Khi có người cần bạn giảng giải một bài học khó, hoặc khi bạn bè gặp chuyện buồn bã, bế tắc tâm lý, phản ứng của bạn là: ", (
@@ -477,7 +463,7 @@ if routing_choice.startswith("A"):
         "C. Động viên bằng những câu an ủi chung chung, hướng dẫn bài ở mức cơ bản.",
         "D. Cố gắng dành thời gian lắng nghe và khuyên nhủ hoặc hướng dẫn trong khả năng của mình.",
         "E. Cực kỳ kiên nhẫn lắng nghe, thấu cảm sâu sắc, hào hứng tìm cách diễn đạt trực quan để người khác hiểu bài hoặc giúp họ tháo gỡ nút thắt tâm lý."
-    ), key="s5_radio")
+    ), index=None, key="s5_radio")
     s5 = lay_diem_lua_chon(s5_opt)
 
     s6_opt = st.radio("Câu S6: Khi cần làm một bài thuyết trình, vẽ sơ đồ, trang trí không gian hoặc làm một sản phẩm sáng tạo, xu hướng của bạn là: ", (
@@ -486,14 +472,14 @@ if routing_choice.startswith("A"):
         "C. Sử dụng các mẫu (template) có sẵn trên mạng mà không chỉnh sửa gì nhiều.",
         "D. Tự tìm cách chọn màu sắc, kiểu chữ và bố cục sao cho ưa nhìn, sạch đẹp.",
         "E. Tự tay thiết kế tỉ mỉ, sáng tạo bố cục, hình ảnh mang phong cách và dấu ấn thẩm mỹ riêng biệt."
-    ), key="s6_radio")
+    ), index=None, key="s6_radio")
     s6 = lay_diem_lua_chon(s6_opt)
 
     if st.button("Xác định 2 nhóm ngành tiềm năng nhất"):
         if not name.strip():
             st.warning("Vui lòng nhập Họ và tên ở Phần 1!")
         elif s1 == 0 or s2 == 0 or s3 == 0 or s4 == 0 or s5 == 0 or s6 == 0:
-            st.warning("⚠️ Vui lòng trả lời đầy đủ tất cả các câu hỏi sàng lọc trước khi tiếp tục!")
+            st.warning("⚠️ Vui lòng trả lời đầy đủ tất cả 6 câu hỏi sàng lọc trước khi tiếp tục!")
         else:
             screening_scores = {
                 GROUPS[0]: s1,
@@ -508,16 +494,14 @@ if routing_choice.startswith("A"):
             highest_score = sorted_s[0][1]
             top_groups = [g for g, score in sorted_s if score == highest_score]
             
-            if len(top_groups) == 2:
-                st.session_state['target_groups'] = top_groups
-                st.success(f"Hệ thống phát hiện 2 nhóm ngành có điểm số cao nhất và đồng đều nhất: **{top_groups[0]}** và **{top_groups[1]}**")
-            elif len(top_groups) == 1:
+            if len(top_groups) >= 2:
+                st.session_state['target_groups'] = top_groups[:2]
+                st.success(f"Hệ thống đã chọn lọc ra các nhóm ngành tiềm năng nhất: **{top_groups[0]}** và **{top_groups[1]}**")
+            else:
                 second_highest_score = sorted_s[1][1]
                 second_groups = [g for g, score in sorted_s if score == second_highest_score]
                 st.session_state['target_groups'] = [top_groups[0], second_groups[0]]
-                st.success(f"Hệ thống đã chọn lọc ra 2 nhóm ngành phù hợp nhất: **{top_groups[0]}** và **{top_groups[1]}**")
-            else:
-                st.session_state['target_groups'] = top_groups[:2] # Tự động lấy tối đa 2 nhóm nếu điểm bằng nhau hàng loạt
+                st.success(f"Hệ thống đã chọn lọc ra 2 nhóm ngành phù hợp nhất: **{top_groups[0]}** và **{second_groups[0]}**")
 
 elif routing_choice is not None and routing_choice.startswith("B"):
     st.header("PHẦN 2.2: Chọn nhóm ngành phân vân")
@@ -536,8 +520,8 @@ st.write("---")
 # ==========================================
 # PHẦN 2.2 & PHẦN 3: MA TRẬN KHẢO SÁT CHUYÊN SÂU
 # ==========================================
-# Đồng bộ hóa dữ liệu từ session_state để hiển thị ma trận chuyên sâu
 selected_target_groups = st.session_state.get('target_groups', [])
+
 if selected_target_groups:
     st.header("PHẦN 2.2: Ma trận khảo sát chuyên sâu")
     
@@ -744,13 +728,13 @@ if selected_target_groups:
             q9_text = "T6.9: Tác phẩm của các nhà thiết kế, kiến trúc sư hoặc nghệ sĩ danh tiếng trên không gian mạng truyền cảm hứng mạnh mẽ đến phong cách của tôi."
             q10_text = "T6.10: Tôi đã từng tự tay thiết kế sản phẩm đồ họa, vẽ tranh dự thi, dựng video clip hoặc tham gia các triển lãm nghệ thuật thực tế."
 
-        c1_opt = st.radio(q1_title, q1_opts, key=f"c1_{grp}")
+        c1_opt = st.radio(q1_title, q1_opts, index=None, key=f"c1_{grp}")
         c1 = lay_diem_lua_chon(c1_opt)
 
-        c2_opt = st.radio(q2_title, q2_opts, key=f"c2_{grp}")
+        c2_opt = st.radio(q2_title, q2_opts, index=None, key=f"c2_{grp}")
         c2 = lay_diem_lua_chon(c2_opt)
 
-        c3_opt = st.radio(q3_title, q3_opts, key=f"c3_{grp}")
+        c3_opt = st.radio(q3_title, q3_opts, index=None, key=f"c3_{grp}")
         c3 = lay_diem_lua_chon(c3_opt)
 
         st.markdown(
@@ -773,7 +757,7 @@ if selected_target_groups:
         
         t1 = st.slider(f"{q10_text} (1-5):", 1, 5, 3, key=f"t1_{grp}")
         
-        score_noi_luc = (c1 + c2 + c3) / 3
+        score_noi_luc = (c1 + c2 + c3) / 3 if (c1 > 0 and c2 > 0 and c3 > 0) else 3.0
         score_gia_dinh = (g1 + g2) / 2
         score_nha_truong = (n1 + n2) / 2
         score_xa_hoi = (x1 + x2) / 2
@@ -787,19 +771,24 @@ if selected_target_groups:
             "nha_truong": score_nha_truong,
             "xa_hoi": score_xa_hoi,
             "trai_nghiem": score_trai_nghiem,
-            "overall": overall_score
+            "overall": overall_score,
+            "raw_c1": c1,
+            "raw_c2": c2,
+            "raw_c3": c3
         }
         st.write("---")
 
     if st.button("🚀 XUẤT BẢN BÁO CÁO PHẢN HỒI CÁ NHÂN HÓA (OUTPUT REPORT)"):
         if not name.strip():
-            st.warning("Vui lòng nhập Họ và tên ở Phần 1!")
+            st.warning("⚠️ Vui lòng nhập Họ và tên ở Phần 1!")
+        elif any(d["raw_c1"] == 0 or d["raw_c2"] == 0 or d["raw_c3"] == 0 for grp, d in group_report_data.items()):
+            st.warning("⚠️ Vui lòng trả lời đầy đủ tất cả các câu hỏi trắc nghiệm chuyên sâu trước khi xuất bản báo cáo!")
         else:
             st.session_state["show_report"] = True
 
     if st.session_state.get("show_report", False):
         if not name.strip():
-            st.warning("Vui lòng nhập Họ và tên ở Phần 1!")
+            st.warning("⚠️ Vui lòng nhập Họ và tên ở Phần 1!")
         else:
             st.success(f"### 📊 BÁO CÁO HƯỚNG NGHIỆP CÁ NHÂN HÓA DÀNH CHO: {name.upper()} ({grade})")
             st.info("📌 **Cách đọc báo cáo:** Công cụ không trả lời 'ngành nào chắc chắn phù hợp', mà giúp bạn nhận diện mức độ tương thích hiện tại, yếu tố đang hỗ trợ/cản trở và việc nên làm tiếp theo.")
@@ -834,9 +823,7 @@ if selected_target_groups:
                 st.plotly_chart(fig, use_container_width=True)
                 st.write(f"⭐ **Điểm tương thích tổng thể: {round(data['overall'], 2)} / 5.0**")
                 
-                # ==========================================
-                # TẦNG 2: THUẬT TOÁN NHẬN DIỆN KHOẢNG CÁCH (GAP ANALYSIS)
-                # ==========================================
+                # TẦNG 2: GAP ANALYSIS
                 st.markdown(f"**Tầng 2: Gap Analysis:**")
                 avg_score = student_data.get("avg_to_hop", 24.0) if student_data else 24.0
                 
@@ -850,7 +837,7 @@ if selected_target_groups:
                         st.info("📌 **Cảnh báo hệ thống:**\nBạn có đam mê tự nhiên rất lớn với ngành nhưng kết quả học tập môn chuyên môn hiện tại chưa phải là lợi thế. Để tránh rủi ro khi xét tuyển, bạn cần:\n(1) Tìm hiểu thêm các phương thức xét tuyển của trường đại học bạn dự định thi vào;\n(2) Tham khảo thêm các hệ đào tạo cao đẳng thực hành hoặc đại học top giữa của nhóm ngành này.\n\n**💡 Gợi ý phân bổ nguyện vọng:** Chia đều nguyện vọng vào 3 nhóm (mức tham khảo cao hơn, tương đương và thấp hơn).\n👉 *Tra cứu quy chế tuyển sinh chi tiết tại [Cổng thông tin tuyển sinh Bộ GD&ĐT](https://tuyensinh.moet.gov.vn).*")
 
                 elif data['noi_luc'] >= 4.0 and data['gia_dinh'] < 3.0:
-                    st.warning("⚠️ *Xung đột Cá nhân - Gia đình/Kinh tế:* Nội lực cao nhưng nguồn lực tài chính/hậu thuẫn từ gia đình hạn chế.")
+                    st.warning("⚠️️ *Xung đột Cá nhân - Gia đình/Kinh tế:* Nội lực cao nhưng nguồn lực tài chính/hậu thuẫn từ gia đình hạn chế.")
                     st.markdown("""📉 **Phiếu đối thoại cùng cha mẹ & Gợi ý trường công lập học phí tốt tại Hà Nội theo nhóm ngành:**
 Bạn có thể cởi mở chia sẻ với bố mẹ rằng: Trong quá trình học đại học, bạn hoàn toàn có thể chủ động tìm các công việc làm thêm phù hợp (như gia sư, trợ lý, bán thời gian) từ năm thứ 2, thứ 3 để tự chi trả một phần sinh hoạt phí hàng ngày. Đồng thời, hãy khẳng định với bố mẹ về triển vọng việc làm thực tế, mức thu nhập và khả năng tự lập tài chính sau khi ra trường nếu bản thân nỗ lực học tập tốt.
 Để giảm bớt gánh nặng tài chính ngay từ bước đầu cho gia đình, hệ thống gợi ý bạn nên ưu tiên xem xét các trường công lập có mức học phí tiêu chuẩn hoặc các nhóm ngành có chính sách hỗ trợ tốt dưới đây:""")
@@ -903,14 +890,10 @@ Bạn có thể cởi mở chia sẻ với bố mẹ rằng: Trong quá trình h
                 else:
                     st.info("✅ Các chỉ số tương đối đồng bộ, chưa phát hiện khoảng cách lớn giữa các nhóm yếu tố.")
 
-                # ==========================================
                 # TẦNG 3: HỒ SƠ CÁ NHÂN + HÀNH ĐỘNG TIẾP THEO
-                # ==========================================
                 hien_thi_ho_so_tong_quan(data, grp, grade)
 
-                # ==========================================
                 # TẦNG 4: THÔNG TIN TUYỂN SINH THAM KHẢO THEO NGÀNH
-                # ==========================================
                 st.markdown("---")
                 st.subheader(f"🏛️ NGÀNH & CƠ SỞ ĐÀO TẠO THAM KHẢO CHO: {grp}")
                 st.info(
