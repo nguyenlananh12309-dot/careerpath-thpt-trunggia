@@ -832,7 +832,7 @@ if selected_target_groups:
                 
                 # TẦNG 1: RADAR CHART
                 st.markdown(f"**Tầng 1: Radar Chart:**")
-                categories = ['Nội lực hành vi', 'Nền tảng gia đình', 'Hậu thuẫn nhà trường', 'Đón đầu xã hội', 'Cọ xát trải nghiệm']
+                categories = ['Cá nhân', 'Gia đình', 'Nhà trường', 'Truyền thông và môi trường xã hội', 'Trải nghiệm nghề nghiệp']
                 values = [data['noi_luc'], data['gia_dinh'], data['nha_truong'], data['xa_hoi'], data['trai_nghiem']]
                 
                 fig = go.Figure()
